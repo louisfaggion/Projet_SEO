@@ -79,7 +79,7 @@ body {
 
 .welcome aside {
   background: url("../images/01-Image.jpg") no-repeat bottom;
-  background-size: 100% auto;
+  background-size: cover;
   height: auto;
   min-height: 200px; }
 .welcome article {
@@ -297,13 +297,21 @@ footer .partenaire ul li{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600; }
 
+/* Correction pour les affiches de films */
 .article .firstImg {
-  position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 250px; }
-  .article .firstImg img {
-    position: absolute; }
+  height: auto; /* On laisse l'image définir sa hauteur */
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.article .firstImg img {
+  position: static; /* On remet l'image dans le flux normal */
+  width: 100%;
+  height: auto;     /* On garde les proportions */
+  display: block;
+  margin: 0 auto;   /* On centre l'image */
+}
 .article .infoBlog {
   font-size: 1rem; }
 
