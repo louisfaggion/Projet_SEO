@@ -117,12 +117,19 @@ body {
   min-height: 200px; }
 
 .movie {
-  background: #f8d480 url("../images/04-Image.jpg") no-repeat bottom;
-  background-size: 100% auto;
+  background: #f8d480 url("../images/04-Image.jpg") no-repeat bottom center;
+  background-size: cover;
   height: auto;
-  min-height: 200px; }
-  .movie .row {
-    padding: 3% 2%; }
+  min-height: 200px;
+}
+.movie .row {
+  padding: 3% 2%;
+  gap: 10 px;
+}
+/* Ajout de cette ligne pour changer uniquement ce h2 en blanc : */
+.movie h2 {
+  color: white;
+}
 
 .booking aside {
   background: url("../images/05-Image.jpg") no-repeat center;
