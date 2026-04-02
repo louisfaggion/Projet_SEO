@@ -8,22 +8,22 @@ body {
   position: relative; }
   body h1, body h2 {
     text-transform: uppercase;
-    color: #1f2c34;
+    color: #24282b;
     font-family: "Monserrat", sans-serif;
     font-weight: 700;
-    border-left: 5px solid #e96b55;
+    border-left: 5px solid #A4BB81;
     padding-left: 5%;
     margin-bottom: 3%; }
   body a {
-    color: #e96b55; }
+    color: #006400; }
     body a:hover {
-      color: #5eab99;
+      color: #e96b55;
       text-decoration: none; }
   body .btn-custom {
     background: transparent;
-    border: 2px solid #e96b55;
+    border: 2px solid #006400;
     border-radius: 25px;
-    color: #e96b55;
+    color: #006400;
     font-weight: 600;
     text-transform: uppercase; }
     body .btn-custom:hover {
@@ -90,13 +90,13 @@ body {
     color: #5eab99; }
 
 .welcome aside {
-  background: url("../images/01-Image.jpg") no-repeat bottom;
+  background: url("../images/01-Image.webp") no-repeat bottom;
   background-size: cover;
   height: auto;
   min-height: 200px; }
 .welcome article {
-  background: #e96b55;
-  color: white;
+  background: #A4BB81;
+  color: #24282B;
   text-align: center;
   text-transform: uppercase; }
   .welcome article .date {
@@ -107,29 +107,29 @@ body {
       font-weight: 700; }
   .welcome article .textshadow {
     font-size: 4rem;
-    text-shadow: 5px 0px 0px #5eab99; }
+    text-shadow: 5px 0px 0px #5c8653; }
   .welcome article .btn-custom {
-    color: #f0f193;
-    border-color: #f0f193;
+    color: #24282B;
+    border-color: #24282B;
     margin-top: 5%; }
     .welcome article .btn-custom:hover {
       color: white;
       border-color: white; }
 
 .about aside {
-  background: url("../images/02-Image.jpg") no-repeat center;
+  background: url("../images/02-Image.webp") no-repeat center;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .news aside {
-  background: url("../images/03-Image.jpg") no-repeat center;
+  background: url("../images/03-Image.webp") no-repeat center;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .movie {
-  background: #f8d480 url("../images/04-Image.jpg") no-repeat bottom center;
+  background: #f8d480 url("../images/04-Image.webp") no-repeat bottom center;
   background-size: cover;
   height: auto;
   min-height: 200px;
@@ -140,11 +140,11 @@ body {
 }
 /* Ajout de cette ligne pour changer uniquement ce h2 en blanc : */
 .movie h2 {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .booking aside {
-  background: url("../images/05-Image.jpg") no-repeat center;
+  background: url("../images/05-Image.webp") no-repeat center;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
@@ -178,6 +178,9 @@ footer {
   color: white; }
   footer h2 {
     font-size: 1.5rem; }
+  footer  a{
+    color: #C7DAB4;
+  }
   footer .footerLinks a {
     display: block;
     color: white; 
@@ -185,7 +188,7 @@ footer {
     footer .footerLinks a:hover {
       color: #5eab99; }
   footer .social .socialicons a {
-    color: white;
+    color: #2E4047;
     font-size: 1.5rem;
     line-height: 45px;
     margin-right: 5%;
@@ -193,7 +196,7 @@ footer {
     display: inline-block;
     width: 45px;
     height: 45px;
-    background-color: #e96b55;
+    background-color: #C7DAB4;
     border-radius: 45px; }
     footer .social .socialicons a:hover {
       background-color: #5eab99; }
@@ -230,73 +233,73 @@ footer .partenaire ul li{
     padding-right: 2%; }
 
 .film01 aside {
-  background: url("../images/01-films.jpg") no-repeat top;
+  background: url("../images/01-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film02 aside {
-  background: url("../images/02-films.jpg") no-repeat top;
+  background: url("../images/02-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film03 aside {
-  background: url("../images/03-films.jpg") no-repeat top;
+  background: url("../images/03-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film04 aside {
-  background: url("../images/04-films.jpg") no-repeat top;
+  background: url("../images/04-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film05 aside {
-  background: url("../images/05-films.jpg") no-repeat top;
+  background: url("../images/05-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film06 aside {
-  background: url("../images/06-films.jpg") no-repeat top;
+  background: url("../images/06-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film07 aside {
-  background: url("../images/07-films.jpg") no-repeat top;
+  background: url("../images/07-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film08 aside {
-  background: url("../images/08-films.jpg") no-repeat top;
+  background: url("../images/08-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film09 aside {
-  background: url("../images/09-films.jpg") no-repeat top;
+  background: url("../images/09-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film10 aside {
-  background: url("../images/10-films.jpg") no-repeat top;
+  background: url("../images/10-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film11 aside {
-  background: url("../images/11-films.jpg") no-repeat top;
+  background: url("../images/11-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
 
 .film12 aside {
-  background: url("../images/12-films.jpg") no-repeat top;
+  background: url("../images/12-films.webp") no-repeat top;
   background-size: 100% auto;
   height: auto;
   min-height: 200px; }
