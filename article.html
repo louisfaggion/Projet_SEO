@@ -13,7 +13,11 @@
 		<meta property="og:image" content="https://louisfaggion.github.io/Projet_SEO/images/01-films.webp">
 		<meta property="og:description" content="Ne manquez pas la projection de ce voyage initiatique à travers la France sauvage. Séance gratuite le 5 Août à 18h.">
 		
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,600,700" rel="stylesheet">
+	<!-- PERF: preconnect ouvre la connexion aux serveurs Google Fonts en avance, réduisant la latence -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- PERF: display=swap affiche la police de secours pendant le chargement, évitant les textes invisibles (FOIT) -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/stylescss.css">
 	<link rel="stylesheet"  href="webfonts/all.css">
@@ -54,7 +58,8 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="firstImg col-md-6 col-lg-8 text-center">
-                    <img src="images/01-actu.webp" class="img-fluid rounded shadow" alt="Affiche officielle du film Sur Les Chemins Noirs avec Jean Dujardin">
+                    <!-- PERF: loading=lazy ne charge les images qu'au moment où elles approchent de la vue, économisant de la bande passante -->
+                    <img src="images/01-actu.webp" class="img-fluid rounded shadow" loading="lazy" alt="Affiche officielle du film Sur Les Chemins Noirs avec Jean Dujardin">
                 </div>
 			</div>
 			<div class="row">
@@ -134,9 +139,10 @@
 	</footer>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>	
+	<!-- PERF: defer charge les scripts en parallèle du HTML et les exécute après, sans bloquer le rendu de la page -->
+	<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script defer src="js/main.js"></script>
 </body>
 </html>

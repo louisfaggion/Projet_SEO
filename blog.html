@@ -13,8 +13,12 @@
 		<meta property="og:image" content="https://louisfaggion.github.io/Projet_SEO/images/logo.webp">
 		<meta property="og:description" content="Découvrez les derniers films sélectionnés pour notre édition sur le thème du voyage au cœur de Paris.">
 		
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,600,700" rel="stylesheet">	
-    <link rel="stylesheet" href="css/bootstrap.css">
+	<!-- PERF: preconnect ouvre la connexion aux serveurs Google Fonts en avance, réduisant la latence -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- PERF: display=swap affiche la police de secours pendant le chargement, évitant les textes invisibles (FOIT) -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/stylescss.css">
 	<link rel="stylesheet"  href="webfonts/all.css">
 	
@@ -54,7 +58,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="card m-2 px-0 col-12 col-md-4 col-lg-3" style="width: 18rem;">
-                    <img class="card-img-top" src="images/01-films.webp" alt="Affiche du film Sur Les Chemins Noirs">
+                    <img class="card-img-top" loading="lazy" src="images/01-films.webp" alt="Affiche du film Sur Les Chemins Noirs">
                     <div class="card-body">
                         <h2 class="card-title">Sur Les Chemins Noirs</h2>
                         <p class="infoBlog">5 Août - 18h00</p>
@@ -63,7 +67,7 @@
                     </div>
                 </div>
                 <div class="card m-2 px-0 col-12 col-md-4 col-lg-3" style="width: 18rem;">
-                    <img class="card-img-top" src="images/02-films.webp" alt="Affiche du film Le Voyage de Chihiro">
+                    <img class="card-img-top" loading="lazy" src="images/02-films.webp" alt="Affiche du film Le Voyage de Chihiro">
                     <div class="card-body">
                         <h2 class="card-title">Le Voyage de Chihiro</h2>
                         <p class="infoBlog">5 Août - 20h00</p>
@@ -72,7 +76,7 @@
                     </div>
                 </div>
                 <div class="card m-2 px-0 col-12 col-md-4 col-lg-3" style="width: 18rem;">
-                    <img class="card-img-top" src="images/03-films.webp" alt="Affiche du film Green Book">
+                    <img class="card-img-top" loading="lazy" src="images/03-films.webp" alt="Affiche du film Green Book">
                     <div class="card-body">
                         <h2 class="card-title">Green Book</h2>
                         <p class="infoBlog">5 Août - 22h00</p>
@@ -81,7 +85,7 @@
                     </div>
                 </div>
                 <div class="card m-2 px-0 col-12 col-md-4 col-lg-3" style="width: 18rem;">
-                    <img class="card-img-top" src="images/04-films.webp" alt="Affiche du film Nomadland">
+                    <img class="card-img-top" loading="lazy" src="images/04-films.webp" alt="Affiche du film Nomadland">
                     <div class="card-body">
                         <h2 class="card-title">En Avant</h2>
                         <p class="infoBlog">6 Août - 18h00</p>
@@ -90,7 +94,7 @@
                     </div>
                 </div>
                 <div class="card m-2 px-0 col-12 col-md-4 col-lg-3" style="width: 18rem;">
-                    <img class="card-img-top" src="images/05-films.webp" alt="Affiche du film Into the Wild">
+                    <img class="card-img-top" loading="lazy" src="images/05-films.webp" alt="Affiche du film Into the Wild">
                     <div class="card-body">
                         <h2 class="card-title">Thelma et Louise</h2>
                         <p class="infoBlog">6 Août - 20h00</p>
@@ -99,7 +103,7 @@
                     </div>
                 </div>
                 <div class="card m-2 px-0 col-12 col-md-4 col-lg-3" style="width: 18rem;">
-                    <img class="card-img-top" src="images/06-films.webp" alt="Affiche du film Little Miss Sunshine">
+                    <img class="card-img-top" loading="lazy" src="images/06-films.webp" alt="Affiche du film Little Miss Sunshine">
                     <div class="card-body">
                         <h2 class="card-title">Easy Rider</h2>
                         <p class="infoBlog">6 Août - 22h00</p>
@@ -161,9 +165,10 @@
 	</footer>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>	
+	<!-- PERF: defer charge les scripts en parallèle du HTML et les exécute après, sans bloquer le rendu de la page -->
+	<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script defer src="js/main.js"></script>
 </body>
 </html>

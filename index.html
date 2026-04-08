@@ -17,7 +17,11 @@
 		<meta property="og:description" content="Du 5 au 7 août, évadez-vous au Parc Monceau avec le Festival des Films de Plein Air. Une sélection unique de films d'auteur sur le thème du Voyage. Entrée libre de 18h à minuit.">
 
 		<!--fonts-->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,600,700" rel="stylesheet">
+		<!-- PERF: preconnect ouvre la connexion aux serveurs Google Fonts en avance, réduisant la latence -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- PERF: display=swap affiche la police de secours pendant le chargement, évitant les textes invisibles (FOIT) -->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 		<!--CSS-->
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<!--<link rel="stylesheet" href="css/style.css">-->
@@ -151,20 +155,21 @@
 
 					<div class="col-12"><h2 id="movie">Les Films</h2></div>
 					<div class="col-sm-4 col-md-3 col-lg-2 mb-3">
-						<a href="films.html#01film" class="hoverImg" ><img src="images/01-films.webp" class="img-fluid" alt="Affiche du film Sur Les Chemins Noirs"></a>
+						<!-- PERF: loading=lazy ne charge les images qu'au moment où elles approchent de la vue, économisant de la bande passante -->
+						<a href="films.html#01film" class="hoverImg" ><img src="images/01-films.webp" class="img-fluid" loading="lazy" alt="Affiche du film Sur Les Chemins Noirs"></a>
 						
 					</div>
 					<div class="col-sm-4 col-md-3 col-lg-2 mb-3">
-						<a href="films.html#02film"><img src="images/02-films.webp" class="img-fluid" alt="Affiche du film Le Voyage des Chihiro"></a>
+						<a href="films.html#02film"><img src="images/02-films.webp" class="img-fluid" loading="lazy" alt="Affiche du film Le Voyage des Chihiro"></a>
 					</div>
 					<div class="col-sm-4 col-md-3 col-lg-2 mb-3">
-						<a href="films.html#03film"><img src="images/03-films.webp" class="img-fluid" alt="Affiche du film Green Book"></a>
+						<a href="films.html#03film"><img src="images/03-films.webp" class="img-fluid" loading="lazy" alt="Affiche du film Green Book"></a>
 					</div>
 					<div class="col-sm-4 col-md-3 col-lg-2 mb-3">
-						<a href="films.html#04film"><img src="images/04-films.webp" class="img-fluid" alt="Affiche du film En Avant"></a>
+						<a href="films.html#04film"><img src="images/04-films.webp" class="img-fluid" loading="lazy" alt="Affiche du film En Avant"></a>
 					</div>
 					<div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-3">
-						<a href="films.html#05film"><img src="images/05-films.webp" class="img-fluid" alt="Affiche du film Thelma et Louise"></a>
+						<a href="films.html#05film"><img src="images/05-films.webp" class="img-fluid" loading="lazy" alt="Affiche du film Thelma et Louise"></a>
 					</div>
 					<div class="col-12 col-sm-4 col-md-3 col-lg-2 mb-3">
 						<a href="films.html#06film"><img src="images/06-films.webp" class="img-fluid" alt="Affiche du film Easy Rider"></a>
@@ -376,9 +381,10 @@
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<script src="js/main.js"></script>	
+		<!-- PERF: defer charge les scripts en parallèle du HTML et les exécute après, sans bloquer le rendu de la page -->
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script defer src="js/main.js"></script>
 	</body>
 </html>

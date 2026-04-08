@@ -12,7 +12,11 @@
 	<meta property="og:url" content="https://louisfaggion.github.io/Projet_SEO/film-en-avant.html">
 	<meta property="og:image" content="https://louisfaggion.github.io/Projet_SEO/images/04-films.webp">
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,600,700" rel="stylesheet">	
+<!-- PERF: preconnect ouvre la connexion aux serveurs Google Fonts en avance, réduisant la latence -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- PERF: display=swap affiche la police de secours pendant le chargement, évitant les textes invisibles (FOIT) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/stylescss.css">
 <link rel="stylesheet" href="webfonts/all.css">
@@ -51,7 +55,8 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="firstImg col-md-6 col-lg-8">
-					<img src="images/06-actu.webp" class="img-fluid rounded shadow" alt="Affiche du film Easy Rider - Réalisé par Dennis Hopper">
+					<!-- PERF: loading=lazy ne charge les images qu'au moment où elles approchent de la vue, économisant de la bande passante -->
+					<img src="images/06-actu.webp" class="img-fluid rounded shadow" loading="lazy" alt="Affiche du film Easy Rider - Réalisé par Dennis Hopper">
 				</div>
 			</div>
 			<div class="row">
@@ -127,7 +132,8 @@
         </div>
 	</footer>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- PERF: defer charge les scripts en parallèle du HTML et les exécute après, sans bloquer le rendu de la page -->
+	<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

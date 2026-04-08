@@ -6,7 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Consultez les mentions légales du Festival des Films de Plein Air. Informations sur l'éditeur du site, l'hébergement et la protection des données personnelles.">
 	
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,600,700" rel="stylesheet">
+	<!-- PERF: preconnect ouvre la connexion aux serveurs Google Fonts en avance, réduisant la latence -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- PERF: display=swap affiche la police de secours pendant le chargement, évitant les textes invisibles (FOIT) -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/stylescss.css">
 	<link rel="stylesheet"  href="webfonts/all.css">

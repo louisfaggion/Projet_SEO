@@ -13,7 +13,11 @@
 		<meta property="og:image" content="https://louisfaggion.github.io/Projet_SEO/images/logo.webp">
 		<meta property="og:description" content="Besoin d'informations sur nos séances gratuites au Parc Monceau ? Notre équipe vous répond.">
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,600,700" rel="stylesheet">	
+	<!-- PERF: preconnect ouvre la connexion aux serveurs Google Fonts en avance, réduisant la latence -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- PERF: display=swap affiche la police de secours pendant le chargement, évitant les textes invisibles (FOIT) -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/stylescss.css">
 	<link rel="stylesheet"  href="webfonts/all.css">
@@ -168,9 +172,10 @@
 	</footer>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 	
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
+	<!-- PERF: defer charge les scripts en parallèle du HTML et les exécute après, sans bloquer le rendu de la page -->
+	<script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script defer src="js/main.js"></script>
 </body>
 </html>
