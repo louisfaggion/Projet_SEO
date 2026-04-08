@@ -80,6 +80,8 @@ body {
 
 .maNav {
   background: #1f2c34; }
+  .maNav a img {
+    width: 80px; }
   .maNav .navbar-nav a.nav-link {
     text-transform: uppercase;
     color: #fff;
@@ -226,7 +228,7 @@ footer .partenaire ul li{
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif; }
   .container-fluid.filmlist .note {
-    color: #000000;
+    color: #e96b55;
     margin: 3% 0%; }
   .container-fluid.filmlist span {
     color: lightgrey;
